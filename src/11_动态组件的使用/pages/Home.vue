@@ -20,7 +20,7 @@
     emits:["pageClick"],
     methods:{
       divClick(){
-        this.$emit("pageClick")
+        this.emit("pageClick")
       }
     }
     

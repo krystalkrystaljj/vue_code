@@ -8,10 +8,12 @@
   </div>
 
   <!-- 动态组件 -->
-  <component :is="currentTab"
+  <keep-alive>
+    <component :is="currentTab"
              name="tjj"
              :age="18"
              @pageClick="pageClick"></component>
+  </keep-alive>
 
   
 </template>
