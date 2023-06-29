@@ -1,9 +1,9 @@
 <template>
   <div>
-    <show-message  class="why" title="哈哈哈" content="我是哈哈哈"></show-message>
-    <show-message :title="title" :content="content"></show-message>
-    <show-message :title="message.title" :content="message.content"></show-message>
-    <show-message v-bind="message"></show-message>
+    <!-- <show-message  class="why" title="哈哈哈" content="我是哈哈哈"></show-message> -->
+    <!-- <show-message :title="title" :content="content"></show-message> -->
+    <!-- <show-message :title="message.title" :content="message.content"></show-message> -->
+    <show-message class="why" id="tjj" v-bind="message"></show-message>
   </div>
 </template>
 
@@ -16,8 +16,8 @@
         title:'嘻嘻嘻',
         content:'我是嘻嘻嘻',
         message:{
-          title:'啦啦啦',
-          content:'我是啦啦啦',
+          title:'messgae中的title',
+          content:'message中的content',
         }
       }
     }

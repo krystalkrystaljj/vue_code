@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <h2 :class="$attrs.class">{{title}}</h2>
-    <p>{{ content }}</p>
+  <div inheritAttrs: false>
+    <!-- <h2 :class="$attrs.class">{{title}}</h2>
+    <p>{{ content }}</p> -->
+    <h2 >{{title}}</h2>
+    <h2>{{content}}</h2>
   </div>
 </template>
 
@@ -13,6 +15,12 @@
         type:String,
         required:true
       },
+      // message:{
+      //   type:Object,
+      //   default() {
+      //     return {}
+      //   }
+      // },
       //自定义验证函数
       proE:{
         validator(value) {
