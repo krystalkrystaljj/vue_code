@@ -14,11 +14,8 @@
       const info1 = {name:'tjj'}
       const readonlyInfo1 = readonly(info1)
 
-      // 2.响应式对象
-
       const updateState = ()=>{
-        // readonlyInfo1.name = 'why' 不可修改
-        // info1.name = 'why' 
+        info1.name = 'why' 
         console.log(info1);
       }
 
