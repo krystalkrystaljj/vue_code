@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './03_RefAPI的补充/App.vue'
+import App from './07_CompositionAPI练习/App.vue'
 
 const app = createApp(App)
 // app.mixin({
