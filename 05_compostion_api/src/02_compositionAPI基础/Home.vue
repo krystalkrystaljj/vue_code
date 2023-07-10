@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import {ref,readonly} from 'vue'
+  import {reactive,ref,readonly} from 'vue'
   
   export default {
     setup() {
@@ -15,10 +15,18 @@
       const readonlyInfo1 = readonly(info1)
 
       // 2.响应式对象
+      const info2 = reactive({
+        name:"why"
+      })
+      const readonlyInfo2 = readonly(info2)
+
+      // 3.响应式对象ref
+      const info3 = ref("why")
+      const readonlyInfo3 = readonly(info3)
 
       const updateState = ()=>{
-        // readonlyInfo1.name = 'why' 不可修改
-        // info1.name = 'why' 
+        readonlyInfo1.name = 'why' 
+        info1.name = 'why' 
         console.log(info1);
       }
 

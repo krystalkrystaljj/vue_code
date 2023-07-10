@@ -10,15 +10,6 @@
   import {reactive} from 'vue'
   
   export default {
-    name:'home',
-    props:{
-      message:{
-        type:String,
-        require:true
-      }
-    },
-
-    
     setup() {
       const state = reactive({
         counter:100
