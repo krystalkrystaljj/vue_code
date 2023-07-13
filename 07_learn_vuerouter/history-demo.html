@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <a href="/home">home</a>
+    <a href="/about">about</a>
+
+    <div class="content">
+      Default
+    </div>
+  </div>
+
+  <script>
+    const contentEl = document.querySelector('.content')
+
+    const aELs = document.getElementsByTagName('a')
+
+    const changeContent = () => {
+        switch(location.pathname) {
+          case "/home":
+            contentEl.innerHTML = "Home"
+            break;
+          case "/about":
+            contentEl.innerHTML = "About"
+            break;
+          default:
+            contentEl.innerHTML = "Default"
+        }
+      }
+    for( let aEl of aELs) {
+      aEl.addEventListener("click",(e)=>{
+        // 阻止默认事件跳转
+        e.preventDefault()
+
+        
+
+        const href = aEl.getAttribute("href")
+        // history.pushState({},"",href)
+        history.replaceState({},"",href)
+
+
+        
+
+        changeContent()
+        
+      })
+
+      window.addEventListener("popstate",changeContent)
+
+
+      
+    }
+    
+  </script>
+</body>
+</html>
