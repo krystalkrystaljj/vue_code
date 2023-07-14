@@ -19,7 +19,7 @@ const routes = [
     },
     children:[
       {
-        path:"",
+        path:"/",
         redirect:"/home/message"
       },
       {
@@ -27,7 +27,7 @@ const routes = [
         component:() => import("../pages/homepages/HomeMessage.vue")
       },
       {
-        path:"/home/shop",
+        path:"shop",
         component:() => import("../pages/homepages/HomeShop.vue")
       }
     ]
@@ -55,5 +55,20 @@ const router = createRouter({
   history:createWebHistory()
 })
 
+// 动态添加路由
+const categoryRoute = {
+  path:"/category",
+  component:() => import("../pages/Category.vue")
+}
+
+// 一般情况应该在此做一个if判断，在特定的情况下添加这个路由
+router.addRoute(categoryRoute)
+
+
+// 添加二级路由对象
+router.addRoute("home",{
+  path:"moment",
+  component:() => import("../pages/homepages/HomeMoment.vue")
+})
 export default router
 

@@ -5,6 +5,7 @@
    <router-view></router-view>
     <router-link to="/home/shop">商品</router-link>
     <router-link to="/home/message">消息</router-link>
+    <router-link to="/home/moment">现在</router-link>
   </div>
 </template>
 

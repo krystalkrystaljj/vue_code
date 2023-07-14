@@ -14,6 +14,8 @@
     <router-link to="/user/tjj/id/2022120395">用户</router-link>
     <button @click="jumpToAbout()">关于</button>
     <button @click="forwardOneStep()">前进一步</button>
+
+    <router-link to="/category">分类</router-link>
     <router-view></router-view>
   </div>
 </template>
